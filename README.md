@@ -1,5 +1,7 @@
 # chef-incron
 
+[![Build Status](https://travis-ci.org/dwradcliffe/chef-incron.png?branch=master)](https://travis-ci.org/dwradcliffe/chef-incron)
+
 Installs the incron package and starts the incrond service.
 
 ## About incron
