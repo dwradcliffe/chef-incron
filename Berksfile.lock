@@ -1,0 +1,7 @@
+{
+  "sources": {
+    "incron": {
+      "path": "."
+    }
+  }
+}

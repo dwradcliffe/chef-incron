@@ -3,11 +3,11 @@
 # Recipe:: default
 #
 
-package "incron" do
+package 'incron' do
   action :install
 end
 
-service "incrond" do
+service 'incrond' do
   supports :status => true, :restart => true, :reload => true
-  action [ :enable, :start ]
+  action [:enable, :start]
 end
