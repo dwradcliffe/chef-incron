@@ -2,6 +2,9 @@
   "sources": {
     "incron": {
       "path": "."
+    },
+    "incron_spec": {
+      "path": "./spec/cookbooks/incron_spec"
     }
   }
 }
