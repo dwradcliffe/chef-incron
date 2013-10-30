@@ -1,3 +1,7 @@
+def whyrun_supported?
+  true
+end
+
 action :create do
 
   t = template "/etc/incron.d/#{new_resource.name}" do
