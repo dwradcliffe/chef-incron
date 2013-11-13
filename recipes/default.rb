@@ -3,6 +3,8 @@
 # Recipe:: default
 #
 
+include_recipe 'yum::repoforge' if platform_family?('rhel')
+
 package 'incron' do
   action :install
 end
