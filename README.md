@@ -10,6 +10,15 @@ Incron is an "inotify cron" system. It consists of a daemon and a table manipula
 
 [More information about incron](http://inotify.aiken.cz/?section=incron&page=about&lang=en)
 
+## Attributes
+
+### `default`
+
+default['incron']['allowed_users'] is an array of users allowed, defaults to ["root"]
+default['incron']['denied_users'] is an array of users denied, defaults to "[]"
+default['incron']['editor'] is the editor user editing a job via command line, defaults to vim
+
+
 ## Recipes
 
 ### `default`
@@ -30,11 +39,22 @@ incron_d "notify_home_changes" do
 end
 ```
 
+### `incron_user`
+
+This resource helps you manage the allow and deny list for incron.
+
+```ruby
+incron_user "root" do
+  action :allow
+end
+```
+
 [More information about syntax](http://linux.die.net/man/5/incrontab)
 
-## License and Author
+## License, Author and Contributor(s)
 
 License: [MIT](https://github.com/dwradcliffe/chef-incron/blob/master/LICENSE)
 
 Author: [David Radcliffe](https://github.com/dwradcliffe)
+Contributor: [Salvatore Poliandro III](https://github.com/popsikle)
 
