@@ -9,4 +9,4 @@ version          '0.1.0'
 supports 'redhat'
 supports 'centos'
 
-depends 'yum'
+depends 'yum', '< 3.0'
