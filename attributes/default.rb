@@ -4,7 +4,7 @@ default['incron']['editor'] = "vim"
 
 case node['platform_family']
 when "debian"
-  default['incron']['service'] = 'incron'
+  default['incron']['service_name'] = 'incron'
 else
-  default['incron']['service'] = 'incrond'
+  default['incron']['service_name'] = 'incrond'
 end

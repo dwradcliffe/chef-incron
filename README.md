@@ -17,7 +17,7 @@ Incron is an "inotify cron" system. It consists of a daemon and a table manipula
 default['incron']['allowed_users'] is an array of users allowed, defaults to ["root"]
 default['incron']['denied_users'] is an array of users denied, defaults to "[]"
 default['incron']['editor'] is the editor user editing a job via command line, defaults to vim
-
+default['incton']['service_name'] is the name of the system service, defaults to "incron" on debian and 'incrond' on rhel platforms
 
 ## Recipes
 
