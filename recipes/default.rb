@@ -15,10 +15,9 @@ service 'incrond' do
   action [:enable, :start]
 end
 
-
 template '/etc/incron.conf' do
   source 'incron.conf.erb'
   mode '0644'
   action :create
-  notifies :reload, "service[incrond]"
+  notifies :reload, 'service[incrond]'
 end

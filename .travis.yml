@@ -4,4 +4,4 @@ rvm:
 script:
   - bundle exec foodcritic -f any . --tags ~FC017
   - bundle exec rspec --color --format progress
-  - bundle exec rubocop
+  - bin/rubocop

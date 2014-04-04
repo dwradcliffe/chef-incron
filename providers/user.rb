@@ -3,20 +3,20 @@ def whyrun_supported?
 end
 
 action :allow do
-  update_config("allow")
+  update_config('allow')
 end
 
 action :deny do
-  update_config("deny")
+  update_config('deny')
 end
 
-def update_config(list_type="allow")
+def update_config(list_type = 'allow')
   # Get a list of allowed and denied users
   case list_type
-  when "allow"
-    users=node.default['incron']['allowed_users']
-  when "deny"
-    users=node.default['incron']['denied_users']
+  when 'allow'
+    users = node.default['incron']['allowed_users']
+  when 'deny'
+    users = node.default['incron']['denied_users']
   else
     return false
   end
@@ -24,7 +24,7 @@ def update_config(list_type="allow")
   users << new_resource.username unless users.include?(new_resource.username)
 
   run_context.resource_collection.each do |res|
-    if res.resource_name == "incron_user"
+    if res.resource_name == 'incron_user'
       if res.action == new_resource.action
         users << res.username unless users.include?(username)
       end
@@ -36,10 +36,10 @@ def update_config(list_type="allow")
     source 'incron.users.erb'
     mode '0644'
     variables(
-        :users => users,
+        :users => users
     )
     action :create
-    notifies :reload, "service[incrond]"
+    notifies :reload, 'service[incrond]'
   end
 
   new_resource.updated_by_last_action(t.updated_by_last_action?)
