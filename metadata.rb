@@ -7,7 +7,8 @@ version          '0.2.0'
 
 recipe 'incron',  'Install incron package and starts the service'
 
-depends 'yum', '< 3.0'
+depends 'yum'
+depends 'yum-repoforge'
 
 supports 'amazon'
 supports 'centos'
