@@ -1,6 +1,6 @@
 AllCops:
   Exclude:
-    - vendor/**
+    - vendor/**/*
     - bin/**
 
 Encoding:
@@ -11,7 +11,8 @@ LineLength:
   Enabled: false
 SingleSpaceBeforeFirstArg:
   Enabled: false
-
+Style/Next:
+  Enabled: false
 CyclomaticComplexity:
   Exclude:
     - providers/user.rb

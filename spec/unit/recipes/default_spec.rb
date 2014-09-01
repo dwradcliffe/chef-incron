@@ -14,8 +14,8 @@ describe 'incron::default' do
       stub_command(/rpm -qa | grep -q '^rpmforge-release-[0-9\.-]'/).and_return(true)
     end
 
-    it 'includes the yum::repoforge recipe' do
-      expect(chef_run).to include_recipe('yum::repoforge')
+    it 'includes the yum-repoforge recipe' do
+      expect(chef_run).to include_recipe('yum-repoforge')
     end
 
   end
