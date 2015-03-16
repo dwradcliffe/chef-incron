@@ -9,10 +9,9 @@ action :create do
     source 'incron.d.erb'
     mode '0644'
     variables(
-        :name => new_resource.name,
-        :path => new_resource.path,
-        :mask => new_resource.mask,
-        :command => new_resource.command
+      :path => new_resource.path,
+      :mask => new_resource.mask,
+      :command => new_resource.command
     )
     action :create
     notifies :reload, 'service[incrond]'

@@ -36,7 +36,7 @@ def update_config(list_type = 'allow')
     source 'incron.users.erb'
     mode '0644'
     variables(
-        :users => users
+      :users => users
     )
     action :create
     notifies :reload, 'service[incrond]'

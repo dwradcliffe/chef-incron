@@ -1,8 +1,12 @@
 language: ruby
+
 bundler_args: --without kitchen
+
 rvm:
-  - 1.9.3
   - 2.0.0
+  - 2.1
+  - 2.2
+
 script:
   - bin/foodcritic -f any . --tags ~FC017
   - bin/rspec --color --format progress
