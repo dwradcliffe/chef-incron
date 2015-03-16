@@ -3,7 +3,7 @@ maintainer       'David Radcliffe'
 maintainer_email 'radcliffe.david@gmail.com'
 license          'MIT'
 description      'Installs and configures incron'
-version          '0.3.0'
+version          '0.3.1'
 
 recipe 'incron',  'Install incron package and starts the service'
 
