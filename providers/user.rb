@@ -39,7 +39,7 @@ def update_config(list_type = 'allow')
       :users => users
     )
     action :create
-    notifies :reload, 'service[incrond]'
+    notifies node['incron']['reload_method'], 'service[incrond]'
   end
 
   new_resource.updated_by_last_action(t.updated_by_last_action?)
