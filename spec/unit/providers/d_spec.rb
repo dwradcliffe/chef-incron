@@ -13,7 +13,7 @@ describe 'incron_d' do
   end
 
   context 'on an el 7 system' do
-    let(:chef_run) { ChefSpec::SoloRunner.new(:platform => 'redhat', :version  => '7.0', step_into: ['incron_d']).converge('incron_spec::simple') }
+    let(:chef_run) { ChefSpec::SoloRunner.new(:platform => 'redhat', :version => '7.0', step_into: ['incron_d']).converge('incron_spec::simple') }
 
     it 'should restart incrond' do
       expect(chef_run.template('/etc/incron.d/notify_home_changes')).to notify('service[incrond]').to(:restart)

@@ -5,7 +5,7 @@ license          'MIT'
 description      'Installs and configures incron'
 version          '0.3.5'
 
-recipe 'incron',  'Install incron package and starts the service'
+recipe 'incron', 'Install incron package and starts the service'
 
 depends 'yum'
 depends 'yum-repoforge'

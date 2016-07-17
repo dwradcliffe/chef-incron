@@ -9,7 +9,7 @@ HashSyntax:
   Enabled: false
 LineLength:
   Enabled: false
-SingleSpaceBeforeFirstArg:
+Style/SpaceBeforeFirstArg:
   Enabled: false
 Style/Next:
   Enabled: false

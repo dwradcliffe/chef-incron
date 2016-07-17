@@ -8,7 +8,7 @@ describe 'incron::default' do
   end
 
   context 'in a redhat-based platform' do
-    let(:chef_run) { ChefSpec::SoloRunner.new(:platform => 'redhat', :version  => '6.3').converge(described_recipe) }
+    let(:chef_run) { ChefSpec::SoloRunner.new(:platform => 'redhat', :version => '6.3').converge(described_recipe) }
 
     before do
       stub_command(/rpm -qa | grep -q '^rpmforge-release-[0-9\.-]'/).and_return(true)
